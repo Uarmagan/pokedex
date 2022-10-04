@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTypes } from '../hooks/useTypes';
+import { colorPicker } from '../utils';
 
 function TypesList() {
   const { data } = useTypes();
@@ -8,7 +9,9 @@ function TypesList() {
       {data?.map((pokeType) => (
         <h1
           key={pokeType.name}
-          className='bg-gray-700 text-white group  px-auto py-2 text-base font-medium border-2 border-solid border-gray-800 w-full text-center'
+          className={`bg-gray-700 group  px-auto py-2 text-base tracking-wider font-medium border-2 border-solid border-gray-800 w-full text-center ${colorPicker(
+            pokeType.name
+          )}`}
         >
           {pokeType.name}
         </h1>

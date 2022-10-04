@@ -1,12 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
+import { colorPicker, padId } from '../utils';
 
 export default function PokemonCard({ pokemon }) {
-  const padId = (num) => {
-    const str = num.toString();
-    const pad = '#000';
-    return pad.substring(0, pad.length - str.length) + str;
-  };
   const capFirstLetter = (str: string) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
@@ -26,18 +22,20 @@ export default function PokemonCard({ pokemon }) {
             />
           </div>
         </div>
-        <h3 className=' font-bold  text-xl font-semibold'>{pokemon.name}</h3>
-        <p className=' font-medium'>
+        <h3 className=' text-xl font-semibold '>{pokemon.name}</h3>
+        <div className='flex space-x-2'>
           {pokemon.types
-            .map(({ type }) => capFirstLetter(type.name))
-
+            .map(({ type }) => (
+              <p className={`font-medium ${colorPicker(type.name)}`}>
+                {capFirstLetter(type.name)}
+              </p>
+            ))
             .reduce((prev, curr) => [
               prev,
               <span className='font-extrabold text-lg '> &#183; </span>,
               curr,
             ])}
-        </p>
-
+        </div>
         <p className='-mt-3'>
           {pokemon.abilities
             .map(({ ability }) => ability.name)
