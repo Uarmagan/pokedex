@@ -40,7 +40,7 @@ export const colorPicker = (type: string) => {
   }
 };
 
-export const padId = (num: string) => {
+export const padId = (num: number) => {
   const str = num.toString();
   const pad = '#000';
   return pad.substring(0, pad.length - str.length) + str;

@@ -1,5 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-const fetchTypes = () => {
+import { PokeTypes } from '../types/pokeTypes';
+
+const fetchTypes = (): Promise<PokeTypes> => {
   return fetch('https://pokeapi.co/api/v2/type')
     .then((res) => res.json())
     .then((data) => {

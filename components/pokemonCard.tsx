@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
+import { Pokemon } from '../types/pokemon';
 import { colorPicker, padId } from '../utils';
 
-export default function PokemonCard({ pokemon }) {
+export default function PokemonCard({ pokemon }: { pokemon: Pokemon }) {
   const capFirstLetter = (str: string) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
@@ -30,7 +31,7 @@ export default function PokemonCard({ pokemon }) {
                 {capFirstLetter(type.name)}
               </p>
             ))
-            .reduce((prev, curr) => [
+            .reduce((prev, curr): any => [
               prev,
               <span className='font-extrabold text-lg '> &#183; </span>,
               curr,
@@ -39,7 +40,7 @@ export default function PokemonCard({ pokemon }) {
         <p className='-mt-3'>
           {pokemon.abilities
             .map(({ ability }) => ability.name)
-            .reduce((prev, curr) => [prev, ' ', curr])}{' '}
+            .reduce((prev, curr): any => [prev, ' ', curr])}
         </p>
       </div>
       <div className='flex-1'>stats</div>
