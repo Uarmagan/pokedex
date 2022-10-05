@@ -9,7 +9,7 @@ function TypesList() {
       {data?.map((pokeType) => (
         <h1
           key={pokeType.name}
-          className={`bg-gray-700 group  px-auto py-2 text-base tracking-wider font-medium border-2 border-solid border-gray-800 w-full text-center ${colorPicker(
+          className={`bg-gray-800 group  px-auto py-2 text-base tracking-wider font-medium border-2 border-solid border-gray-900 w-full text-center ${colorPicker(
             pokeType.name
           )}`}
         >
