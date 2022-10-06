@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import Layout from '../components/layout';
 import {
   Hydrate,
   QueryClient,
@@ -11,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = React.useState(() => new QueryClient());
   return (
     <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </QueryClientProvider>
   );
 }

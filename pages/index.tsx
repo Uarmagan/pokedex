@@ -1,11 +1,3 @@
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import logo from '../public/pokemon-logo.png';
-import PokemonCard from '../components/pokemonCard';
-import TypesList from '../components/typesList';
-import { usePokemon } from '../hooks/usePokemon';
-import { PokemonList } from '../components/pokemonList';
 import Link from 'next/link';
 export default function Home() {
   return (
