@@ -9,7 +9,7 @@ export const SortLimit = () => {
       <div className=' h-16 flex items-center flex-1'>
         <Menu as='div' className='relative inline-block text-left'>
           <div>
-            <Menu.Button className='inline-flex w-full justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+            <Menu.Button className='inline-flex w-full justify-center py-2 text-md text-gray-700 hover:text-gray-500 font-bold'>
               Ascending
               <ChevronDownIcon
                 className='-mr-1 ml-2 h-5 w-5'
@@ -69,8 +69,8 @@ export const SortLimit = () => {
             type='text'
             name='from'
             value={0}
-            required
-            className='bg-transparent w-16 py-2 border border-gray-300 rounded-xl text-right pr-2 ml-2 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'
+            readOnly
+            className='bg-white w-16 py-2 border border-gray-300 rounded-xl text-right pr-2 ml-2 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'
           />
         </div>
         <div>
@@ -81,8 +81,8 @@ export const SortLimit = () => {
             type='text'
             name='to'
             value={20}
-            required
-            className=' bg-transparent w-16 py-2 border-gray-300 border-[1px] rounded-xl text-right pr-2 ml-2 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'
+            readOnly
+            className='bg-white w-16 py-2 border-gray-300 border-[1px] rounded-xl text-right pr-2 ml-2 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'
           />
         </div>
       </div>
